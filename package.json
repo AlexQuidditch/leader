@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "choices.js": "^9.1.0",
+    "hamburgers": "^1.1.3",
+    "imask": "^6.2.2",
+    "normalize.css": "^8.0.1",
+    "swiper": "^6.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-viewport-height-correction": "^1.1.1",
+    "sass": "^1.49.0",
+    "typescript": "^4.5.5",
+    "vite": "^2.7.13",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "name": "section-fitness_customer-landing",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite --force",
+    "serve": "vite preview"
+  },
+  "version": "0.0.0"
+}

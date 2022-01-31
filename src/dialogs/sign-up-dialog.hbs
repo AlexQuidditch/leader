@@ -1,0 +1,144 @@
+<div
+  data-dialog="sign-up-dialog"
+  class="modal-dialog-wrapper"
+>
+  <a
+    href="/"
+    class="logo__link"
+    style="position:fixed"
+  >
+    <svg viewBox="0 0 180 58" class="logo__image" fill="#fff" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M177.049 0H2.939L0 2.939v51.26l2.939 2.939h174.11l2.951-2.94V2.939L177.049 0zm-2.65 51.525H58.414V32.959H51.46v18.566H5.589V5.588h45.87v18.579h6.955V5.588h115.998l-.013 45.937z"/><path d="M68.35 43.714h9.714l2.24-2.09V31.117h-5.311v8.004l-1.12.879h-1.229l-1.18-.867V17.874l1.18-.867h1.229l1.12.885v8.04h5.311V15.386l-2.24-2.09h-9.713l-2.24 2.09v26.238l2.24 2.09zM93.975 39.998h-4.33V29.407h3.92V25.69h-3.92v-8.636h4.33v-3.71H84.29v30.37h9.684V40zM103.273 29.406h2.408l1.121.88v13.428h5.353v-14.41l-1.758-1.813 1.758-2.084v-12.11h-5.353V24.81l-1.121.88h-2.408V13.296h-5.354v30.417h5.354V29.406zM126.536 46.081h5.396v-6.124h-1.548v-26.66h-5.305v26.702h-3.584V13.297h-5.305v30.417h10.346v2.367zM143.717 24.895v18.82h4.896V13.296h-4.962l-4.378 18.91v-18.91h-4.902v30.417h4.914l4.432-18.819zM158.001 30.785l1.12-.88h2.409v13.81h5.354V13.296H154.93l-2.282 2.09v10.84l2.174 1.842-2.174 1.897v13.73h5.353V30.785zm0-12.893l1.12-.886h2.409v9.184h-2.409l-1.12-.897v-7.401zM13.55 43.75h30.387V32.503H36.67v3.98h-15.85v-15.85h15.85v3.974h7.268V13.364H13.55v30.388z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h180v57.113H0z"/></clipPath></defs></svg>
+  </a>
+  <div class="modal-overlay"></div>
+  <div class="modal-dialog">
+    <header class="modal-dialog__header">
+      <h4 class="modal-dialog__header-title">РЕГИСТРАЦИЯ</h4>
+      <button
+        data-dialog-action="close"
+        class="modal-dialog__header-close"
+      >
+        <img
+          src="/src/images/close_icon.png"
+          alt=""
+        >
+      </button>
+    </header>
+    <div class="modal-dialog__content _mb-xs">
+      <form
+        id="sign-up"
+        class="auth-form"
+      >
+        <label
+          for="sign-up-email"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-email"
+            name="email"
+            placeholder="E-MAIL"
+            type="email"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-password"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-password"
+            name="password"
+            placeholder="ПАРОЛЬ"
+            type="password"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-first-name"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-first-name"
+            name="first_name"
+            placeholder="ВАШЕ ИМЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-last-name"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-last-name"
+            name="last_name"
+            placeholder="ФАМИЛИЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-birthday"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-birthday"
+            name="birthday"
+            placeholder="ДАТА РОЖДЕНИЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-phone"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-phone"
+            name="phone"
+            placeholder="НОМЕР ТЕЛЕФОНА"
+            type="tel"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <input
+          type="checkbox"
+          id="sign-up-rules"
+          name="rules"
+          value="true"
+          required
+          class="auth-form__checkbox"
+        >
+        <label
+          for="sign-up-rules"
+          class="auth-form__label"
+        >Я ознакомился и согласен с&nbsp;<a href="/rules.html">правилами студии</a>
+        </label>
+        <input
+          id="sign-up-confidential"
+          type="checkbox"
+          name="confidential"
+          value="true"
+          required
+          class="auth-form__checkbox"
+        >
+        <label
+          for="sign-up-confidential"
+          class="auth-form__label"
+        >Я согласен с&nbsp;<a href="/confidential.html">политикой конфиденциальности</a>
+        </label>
+        <div class="auth-form__actions">
+          <button
+            type="submit"
+            class="auth-form__button _sign-up _full"
+          >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

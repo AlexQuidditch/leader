@@ -1,0 +1,44 @@
+@import '../variables';
+
+.callback {
+  width: 172px;
+
+  .d-flex {
+    padding: 9px 6px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+
+  &__phone {
+    color: $color-white;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  hr {
+    margin: 0;
+    height: 1px;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__message {
+    color: $color-white;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    padding: 6px 9px;
+
+    background-color: $color-primary;
+
+    &._last {
+      justify-content: center;
+    }
+  }
+}

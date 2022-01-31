@@ -1,0 +1,32 @@
+@import '../variables';
+
+.personal {
+  padding-top: 135px;
+  padding-bottom: 80px;
+
+  background-image: url('/src/images/personal_training.png');
+  background-repeat: no-repeat;
+  background-position: 87.5% 0;
+
+  &__title {
+    margin-bottom: 60px;
+
+    font-family: $font-family-bold;
+    font-size: 200px;
+
+    white-space: pre-line;
+
+    color: $color-black;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    background-size: 50%;
+    background-position: 100% top;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    background-size: 60%;
+    background-position: 90% top;
+    padding-bottom: 60px;
+  }
+}

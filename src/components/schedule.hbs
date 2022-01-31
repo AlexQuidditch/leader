@@ -1,0 +1,29 @@
+{{#with schedule}}
+<div class="schedule section">
+  <div class="container">
+    <h1 class="section__heading schedule__title">РАСПИСАНИЕ <span class="schedule__title _accent">секции</span></h1>
+
+    <ul class="options-list">
+      {{#each options}}
+      <li class="options-item">
+        <input
+          type="checkbox"
+          name="options"
+          id="{{this.value}}"
+          value="{{this.value}}"
+          class="options-item__checkbox"
+        >
+        <label
+          for="{{this.value}}"
+          class="options-item__label"
+        >
+          <span>{{this.text}}</span>
+        </label>
+      </li>
+      {{/each}}
+    </ul>
+
+    {{> schedule-view }}
+  </div>
+</div>
+{{/with}}

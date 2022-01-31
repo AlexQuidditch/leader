@@ -1,0 +1,39 @@
+@import '../variables';
+
+.can-help {
+  padding: 100px 0;
+  height: 620px;
+
+  background-color: $color-gray;
+
+  &__title {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 70px;
+
+    color: black;
+
+    span {
+      font-family: $font-family-book;
+      color: $color-accent;
+    }
+  }
+
+  &__message {
+    max-width: 497px;
+
+    font-size: 24px;
+    line-height: 32px;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  .container {
+    background-position: right 0;
+    background-repeat: no-repeat;
+    background-image: url('/src/images/help.jpg');
+    background-size: contain;
+  }
+}

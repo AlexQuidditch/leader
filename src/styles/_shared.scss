@@ -1,0 +1,19 @@
+@import './variables';
+
+.btn {
+  padding: 22px 40px;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 17px;
+
+  color: $color-white;
+  background-color: $color-accent;
+
+  border: 2px solid $color-accent;
+
+  &._outlined {
+    color: $color-accent;
+    background-color: transparent;
+  }
+}

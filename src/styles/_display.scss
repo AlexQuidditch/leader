@@ -1,0 +1,57 @@
+@import './variables';
+
+@media (min-width: $screen-lg-min) {
+  .d-lg-none {
+    display: none;
+  }
+  .d-lg-flex {
+    display: flex;
+  }
+  .d-lg-grid {
+    display: grid;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-flex {
+    display: flex;
+  }
+  .d-md-grid {
+    display: grid;
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .d-sm-none {
+    display: none;
+  }
+  .d-sm-flex {
+    display: flex;
+  }
+  .d-sm-grid {
+    display: grid;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .d-xs-none {
+    display: none;
+  }
+  .d-xs-flex {
+    display: flex;
+  }
+  .d-xs-grid {
+    display: grid;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}

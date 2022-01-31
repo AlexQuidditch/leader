@@ -1,0 +1,77 @@
+/* ----- Creates a wrapper for a series of columns ----- */
+@use 'sass:math';
+
+@import './variables';
+
+@mixin make-row {
+  display: grid;
+  gap: $grid-gutter-width;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  &._no-gap {
+    gap: 0;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &._sm-no-gap {
+      gap: 0;
+    }
+
+    &._sm-gap {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    gap: math.div($grid-gutter-width, 2)
+  }
+}
+
+@mixin make-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin make-masonry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+    flex: 1 1 percentage(($i / 12));
+    position: relative;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column: span #{$i};
+      flex: 1 1 percentage(($i / 12));
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      grid-column: span #{$i};
+      flex: 1 1 percentage(($i / 12));
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      grid-column: span #{$i};
+      flex: 1 1 percentage(($i / 12));
+      position: relative;
+    }
+  }
+}

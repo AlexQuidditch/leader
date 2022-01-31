@@ -1,0 +1,30 @@
+{{#with priceItem}}
+<section class="prices section">
+  <h3 class="prices__title">{{category}}</h3>
+  <div class="container">
+    <ul class="row prices-list">
+      {{#each items}}
+      <li class="col-6 col-xs-12 prices-list__item">
+        <h5 class="prices-list__item-title">{{this.title}}</h5>
+        {{#if this.time}}<span class="prices-list__item-badge">{{this.time}}</span>{{/if}}
+        <div class="prices-list__item-footer">
+          <span class="prices-list__item-price">
+            {{#if this.price.old}}<s>{{this.price.old}}</s>{{/if}}
+            {{this.price.current}}
+            РУБЛЕЙ
+          </span>
+          <a
+            data-charge-dialog="charge-balance-dialog"
+            data-group-title="{{this.title}}"
+            data-item-title="{{this.category}}"
+            data-item-price="{{this.price.current}}"
+            href=""
+            class="prices-list__item-button"
+          >КУПИТЬ</a>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

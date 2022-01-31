@@ -1,0 +1,49 @@
+{{#with news}}
+<section
+  id="news"
+  class="news section"
+>
+  <div class="container">
+    <h2 class="news__title section__heading">Новая <span class="news__title _accent">секция</span> на смоленке</h2>
+
+    <ul class="news-list row">
+      {{#each list}}
+      <li class="news-item col-6 col-xs-12">
+        {{this}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="container _fluid">
+    <div class="row image-list">
+      <div class="col-6">
+        <img
+          src="/src/images/Rectangle12.png"
+          alt=""
+        >
+        <img
+          src="/src/images/Rectangle30.png"
+          alt=""
+        >
+      </div>
+      <div class="col-6">
+        <img
+          src="/src/images/Rectangle13.png"
+          alt=""
+        >
+        <img
+          src="/src/images/Rectangle10.png"
+          alt=""
+        >
+      </div>
+      <div class="col-12">
+        <img
+          src="/src/images/Rectangle32.png"
+          alt=""
+        >
+      </div>
+    </div>
+  </div>
+</section>
+{{/with}}

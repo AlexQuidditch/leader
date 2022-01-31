@@ -1,0 +1,21 @@
+$admin-bar-height: 32px;
+
+body.admin-bar {
+  #app {
+    position: relative;
+  }
+
+  /** Header */
+  .menu-container {
+    top: $admin-bar-height;
+  }
+
+  .header-menu__item-link._vertical {
+    top: 50px + $admin-bar-height;
+  }
+
+  /** Sidebar */
+  .sidebar {
+    padding-top: 72px + $admin-bar-height;
+  }
+}

@@ -1,0 +1,248 @@
+@import '../variables';
+
+.about-us {
+  .choose-us {
+    padding: 50px;
+
+    background-color: $color-black;
+
+    &__title {
+      margin-bottom: 60px;
+
+      color: $color-white;
+
+      font-size: 64px;
+      line-height: 52px;
+
+      span {
+        color: $color-accent;
+      }
+    }
+
+    .choose-us-list {
+      gap: 0;
+
+      padding: 0 30px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:last-child) {
+          border-right: 1px solid $color-accent;
+        }
+
+        img {
+          margin-top: 18px;
+          margin-bottom: 32px;
+          max-height: 90px;
+        }
+
+        span {
+          color: $color-white;
+          text-align: center;
+          white-space: pre-line;
+        }
+      }
+    }
+  }
+
+  .company {
+    gap: 0;
+    margin-bottom: 70px;
+
+    background-color: white;
+
+    &__history {
+      padding: 40px 70px 70px 60px;
+
+      background-color: $color-accent;
+
+      h5 {
+        margin-bottom: 50px;
+
+        font-family: $font-family-book;
+        font-size: 64px;
+        line-height: 52px;
+      }
+
+      p {
+        color: $color-white;
+
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+
+    &__collaborate {
+      padding: 70px 60px;
+      border-left: 1px solid #CECECE;
+      border-bottom: 1px solid #CECECE;
+
+      .btn:not(._outlined) {
+        margin-right: 30px;
+      }
+    }
+
+    &__photo {}
+  }
+
+  .our-team {
+    position: relative;
+
+    color: $color-white;
+    background-color: $color-primary;
+
+    &__title {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+
+      font-size: 64px;
+
+      color: $color-accent;
+    }
+  }
+}
+
+.team-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    color: $color-white;
+
+    font-size: 18px;
+    line-height: 26px;
+
+    img {
+      margin-right: 6px;
+    }
+  }
+}
+
+.team-slider {
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  .team-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+    &__info {
+      padding: 160px 0 70px 130px;
+    }
+
+    &__unit {
+      margin-bottom: 8px;
+
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    &__name {
+      margin-bottom: 16px;
+      font-size: 35px;
+      font-family: $font-family-book;
+      line-height: 52px;
+    }
+
+    &__experience {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__photo {
+      position: relative;
+
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+
+        z-index: 100;
+      }
+    }
+
+    &__photo-circle {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+
+      width: 312px;
+      height: 312px;
+
+      background-color: #EFF5EB;
+
+      border-radius: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__pagination {
+    position: static !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+
+    background-color: $color-white;
+
+    border: 1px solid #CECECE;
+    border-top: none;
+  }
+
+  &__pagination-bullet {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    margin-left: 28px;
+
+    background-color: $color-primary;
+    cursor: pointer;
+
+    border-radius: 50%;
+    border: 3px solid $color-white;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &__pagination {
+      bottom: 20px;
+      right: 20px
+    }
+
+    &__pagination-bullet {
+      width: 10px;
+      height: 10px;
+
+      margin-left: 5px;
+      border-width: 1px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &__pagination {
+      bottom: 40px;
+      right: 20px
+    }
+  }
+}

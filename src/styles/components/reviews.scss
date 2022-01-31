@@ -1,0 +1,71 @@
+@import '../variables';
+
+.reviews {
+  padding-top: 90px;
+  padding-bottom: 160px;
+
+  &__title {
+    margin-bottom: 120px;
+
+    text-align: center;
+
+    font-family: $font-family-book;
+    font-size: 64px;
+  }
+
+  .reviews-slider {
+    overflow: hidden;
+  }
+
+  .reviews-slide {
+    position: relative;
+    padding: 0 80px;
+    text-align: center;
+
+    &__name {
+      margin-bottom: 20px;
+      font-family: $font-family-book;
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    &__message {
+      max-width: 60%;
+      margin: 0 auto 40px auto;
+
+      text-align: center;
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    &__stars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 54px;
+
+      img {
+        width: 42px;
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &__dots {
+      position: absolute;
+      z-index: -1;
+      top: 125px;
+      left: 100px;
+    }
+
+    .badge {
+      position: static;
+      top: initial;
+      left: initial;
+      bottom: initial;
+      margin: 0 auto;
+    }
+  }
+}

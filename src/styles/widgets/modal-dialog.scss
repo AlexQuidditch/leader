@@ -1,0 +1,250 @@
+@import '../variables';
+
+$header-height-lg: 90px;
+
+.modal-dialog-wrapper {
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-color: rgba(96, 152, 160, 0.5);
+  backdrop-filter: blur(15px);
+
+  transition:
+    opacity 0.2s ease-in,
+    visibility 0.2s ease-in;
+
+  &._show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &._accent {
+    background-color: $color-white;
+    backdrop-filter: none;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    overflow-y: auto;
+    align-items: flex-start;
+
+    background-color: $color-accent !important;
+    backdrop-filter: none;
+  }
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-dialog {
+  position: relative;
+
+  width: 100%;
+  max-width: 640px;
+
+  background-color: $color-white;
+
+  @media (max-width: $screen-sm-max) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &._profile {
+    padding-top: 90px;
+
+    .modal-dialog__content {
+      padding-top: 40px;
+
+      @media (max-width: $screen-sm-max) {
+        padding: 0 30px 30px;
+      }
+    }
+  }
+
+  &._black {
+    .modal-dialog__header {
+      background-color: $color-black;
+    }
+  }
+
+  &._accent {
+    .modal-dialog__header {
+      background-color: $color-accent;
+    }
+  }
+
+  &._rounded {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    .modal-dialog__header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      padding-top: 26px;
+    }
+
+    .modal-dialog__content {
+      padding: 40px 30px 25px 30px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      border-radius: 30px;
+
+      .modal-dialog__header {
+        padding-top: 90px;
+      }
+
+      .modal-dialog__content {
+        padding: 0 30px;
+
+        &>* {
+          padding: 30px 10px 10px;
+          background-color: $color-white;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+
+  &._centered {
+    .modal-dialog__header {
+      align-items: center;
+      text-align: center;
+
+      @media (max-width: $screen-sm-max) {
+        align-items: flex-start;
+      }
+    }
+
+    .modal-dialog__category-title {
+      margin: 14px 0;
+    }
+  }
+
+  &__header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+    min-height: $header-height-lg;
+
+    color: $color-white;
+    background-color: $color-accent;
+  }
+
+  &__category-title {
+    margin-top: 24px;
+    margin-bottom: 28px;
+
+    font-family: $font-family-bold;
+    font-size: 30px;
+    line-height: 1;
+    color: $color-white;
+
+    span:not(.value) {
+      opacity: 0.5;
+    }
+
+    li {
+      margin: 12px 0;
+
+      @media (max-width: $screen-sm-max) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__header-title,
+  &__item-title {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-family: $font-family-bold;
+    font-size: 50px;
+    line-height: 1;
+  }
+
+  &__header-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 0;
+    cursor: pointer;
+
+    @media (max-width: $screen-sm-max) {
+      top: 25px;
+      right: 20px;
+
+      width: 24px;
+      height: 24px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    padding: 70px 170px 100px 170px;
+
+    &._mb-xs {
+      padding-bottom: 40px;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    background-color: $color-accent;
+
+    &._profile {
+      padding-top: 0;
+    }
+
+    &__category-title,
+    &__item-title {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__header {
+      padding-top: 90px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__header-title {
+      text-align: left;
+    }
+
+    &__item-title {
+      margin-bottom: 8px;
+    }
+
+    &__content {
+      padding: 20px 30px;
+    }
+  }
+}

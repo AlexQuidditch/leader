@@ -1,0 +1,112 @@
+@use 'sass:math';
+
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixels, $context) * 1em;
+}
+
+/**
+ * Variables (_variables.scss)
+ */
+
+/* ----- Colors ----- */
+// General
+
+// Callouts
+$color-callout: #f9f9f9 !default;
+$color-callout-success: #eaffee !default;
+$color-callout-info: #f2f8ff !default;
+$color-callout-warning: #fffae9 !default;
+$color-callout-danger: #ffedeb !default;
+
+// Footer
+$color-footer-bg: #f5f5f5 !default;
+$color-footer-copyright: #bdbdbd !default;
+
+$size-list-dot: 6px;
+$dot-xs-size: 8px;
+
+// Themes
+$color-accent: #FF9C00;
+$color-primary: #001E6B;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #F0F0F0;
+$color-red: #F58181;
+
+$transition-params: .2s ease;
+
+/* ----- Font families ----- */
+$font-family-book: 'AGOpusHighResolution', sans-serif !default;
+$font-family-regular: 'Futurica', sans-serif !default;
+$font-family-light: 'Bebas Neue Light', sans-serif !default;
+$font-family-bold: 'Bebas Neue Bold', sans-serif !default;
+$font-family-thin: 'Bebas Neue Thin', sans-serif !default;
+
+/* ----- Font sizes ----- */
+// Base
+$font-size-base: em(18px) !default;
+
+// Headings
+$font-size-h1: 60px !default;
+$font-size-h1-xs: 32px !default;
+$font-size-h2: 180px !default;
+$font-size-h2-xs: 50px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: 24px !default;
+$font-size-h6: 1em !default;
+
+// Other
+$font-size-small: em(14px) !default;
+
+/* ----- Line heights ----- */
+// Base
+$line-height-base: 1.33 !default;
+
+// Headings
+$line-height-headings: 1.1 !default;
+
+/* ----- Z Indexes ----- */
+$z-index-offcanvas: 2 !default;
+$z-index-offcanvas-toggle: 3 !default;
+
+$container-small-width: 760px;
+$container-width: 1180px;
+$container-wide-width: 1380px;
+
+/* ----- Media queries breakpoints ----- */
+// Mobile first
+$screen-xs-min: 480px !default; // Extra small screens, Phones
+$screen-sm-min: 768px !default; // Small screens, Tablets
+$screen-md-min: 992px !default; // Medium screens, Desktop
+$screen-lg-min: 1200px !default; // Large screens, Wide desktops
+
+// Desktop first
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+/* ----- Grid system ----- */
+// Columns
+$grid-columns: 12 !default;
+
+// Gutter
+$grid-gutter-width: 40px !default;
+
+// Container
+$container-tablet: (720px + $grid-gutter-width) !default;
+$container-sm: $container-tablet !default;
+$container-desktop: (940px + $grid-gutter-width) !default;
+$container-md: $container-desktop !default;
+$container-large-desktop: (1140px + $grid-gutter-width) !default;
+$container-lg: $container-large-desktop !default;

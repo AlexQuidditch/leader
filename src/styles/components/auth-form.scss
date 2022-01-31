@@ -1,0 +1,193 @@
+@import '../variables';
+
+.auth-form {
+  width: 100%;
+  max-width: 300px;
+
+  @media (max-width: $screen-sm-max) {
+    max-width: initial;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 10px;
+    margin-bottom: 10px;
+
+    font-family: $font-family-bold;
+    font-size: 25px;
+    text-transform: uppercase;
+
+    background-color: $color-gray;
+    border: none;
+
+    &::placeholder {
+      color: rgba($color-black, .2);
+    }
+
+    &._invalid {
+      background-color: #FFEFEF;
+      border: 2px solid $color-red;
+
+      +.auth-form__error-message {
+        display: block;
+      }
+    }
+  }
+
+  &__input-reset {
+    position: absolute;
+    top: 26px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    font-size: 0;
+
+    transform: translateY(-50%);
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+
+      margin: 5px 0;
+
+      font-family: $font-family-bold;
+      font-size: 15px;
+      line-height: 1;
+
+      color: #A5A5A5;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        color: $color-white;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: none;
+        margin-right: 10px;
+        background-color: $color-gray;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+    }
+
+    &:checked+label::before {
+      background-color: $color-black;
+      border: 5px solid $color-gray;
+    }
+  }
+
+  &__error-message {
+    display: none;
+
+    position: absolute;
+    top: 7px;
+    right: 7px;
+
+    font-family: $font-family-bold;
+    font-size: 15px;
+    line-height: 1;
+    text-align: right;
+    text-transform: uppercase;
+
+    color: $color-red;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-family: $font-family-bold;
+    font-size: 15px;
+    line-height: 1;
+
+    text-align: center;
+
+    color: #A5A5A5;
+
+    @media (max-width: $screen-sm-max) {
+      color: $color-white;
+    }
+  }
+
+  &__button {
+    height: 50px;
+    padding-top: 2px;
+
+    font-family: $font-family-bold;
+    font-size: 25px;
+
+    text-align: center;
+    line-height: 50px;
+
+    color: $color-white;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+
+    &._login {
+      width: 100%;
+      max-width: 80px;
+      background-color: $color-accent;
+
+      @media (max-width: $screen-sm-max) {
+        color: $color-black;
+        background-color: $color-white;
+      }
+    }
+
+    &._sign-up {
+      width: 100%;
+      max-width: 210px;
+      background-color: $color-red;
+
+      &._full {
+        margin-top: 20px;
+        max-width: initial;
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+}

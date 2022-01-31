@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="favicon.svg"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Страница не найдена</title>
+</head>
+
+<body>
+  <div
+    id="app"
+    class="wrapper"
+  >
+    {{> header }}
+
+    {{> sidebar }}
+
+    <section class="raw-content">
+      <div class="container">
+        <h1 class="raw-content__title">Ошибка <span>404</span></h1>
+
+        <p class="raw-content__message">СТРАНИЦА НЕ НАЙДЕНА</p>
+
+        <a href="" class="raw-content__back-link">вернуться на главную</a>
+      </div>
+    </section>
+
+    {{> footer }}
+  </div>
+
+  <script
+    type="module"
+    src="/src/scripts/main.ts"
+  ></script>
+</body>
+
+</html>
