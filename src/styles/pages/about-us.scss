@@ -1,52 +1,6 @@
 @import '../variables';
 
 .about-us {
-  .choose-us {
-    padding: 50px;
-
-    background-color: $color-black;
-
-    &__title {
-      margin-bottom: 60px;
-
-      color: $color-white;
-
-      font-size: 64px;
-      line-height: 52px;
-
-      span {
-        color: $color-accent;
-      }
-    }
-
-    .choose-us-list {
-      gap: 0;
-
-      padding: 0 30px;
-
-      li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &:not(:last-child) {
-          border-right: 1px solid $color-accent;
-        }
-
-        img {
-          margin-top: 18px;
-          margin-bottom: 32px;
-          max-height: 90px;
-        }
-
-        span {
-          color: $color-white;
-          text-align: center;
-          white-space: pre-line;
-        }
-      }
-    }
-  }
 
   .company {
     gap: 0;
@@ -102,6 +56,64 @@
       font-size: 64px;
 
       color: $color-accent;
+    }
+  }
+}
+
+.choose-us {
+  padding: 50px;
+
+  background-color: $color-black;
+
+  &__title {
+    margin-bottom: 60px;
+
+    color: $color-white;
+
+    font-size: 64px;
+    line-height: 52px;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  .choose-us-list {
+    gap: 0;
+
+    padding: 0 30px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-align: center;
+
+      font-family: $font-family-book;
+      font-weight: bold;
+
+      color: $color-white;
+
+      &:not(:last-child) {
+        border-right: 1px solid $color-accent;
+      }
+
+      h6 {
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      img {
+        margin-top: 18px;
+        margin-bottom: 32px;
+        max-height: 90px;
+      }
     }
   }
 }

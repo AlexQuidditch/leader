@@ -8,6 +8,7 @@ export default handlebars({
   partialDirectory: [
     resolve(__dirname, '../dialogs'),
     resolve(__dirname, '../components'),
+    resolve(__dirname, '../sections'),
     resolve(__dirname, '../widgets'),
   ],
   helpers: {

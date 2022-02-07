@@ -1,0 +1,21 @@
+{{#with faq}}
+<section
+  id="faq"
+  class="faq"
+>
+  <div class="container">
+    <div class="faq-wrapper">
+      <div class="row">
+        <div class="col-9">
+          <h3 class="faq__title">ВОПРОСЫ <span>И ОТВЕТЫ</span></h3>
+        </div>
+        <div class="col-3">
+          <p class="faq__sub-title">Ответы на ваши самые часто задаваемые вопросы:</p>
+        </div>
+      </div>
+
+      {{> accordion items=list }}
+    </div>
+  </div>
+</section>
+{{/with}}

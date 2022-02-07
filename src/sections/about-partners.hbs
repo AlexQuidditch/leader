@@ -1,0 +1,30 @@
+{{#with partners}}
+<section
+  id="about-partners"
+  class="about-partners"
+>
+  <div class="container">
+    <h3 class="about-partners__title">ПАРТНЕРЫ И <span>ВЕДОМСТВА</span></h3>
+
+    <ul class="partners-list">
+      {{#each list}}
+      <li class="partners-item col-3">
+        <img
+          src="{{this.logo}}"
+          alt=""
+          class="partners-item__logo"
+        >
+        <div class="spacer"></div>
+        <p class="partners-item__description">{{this.description}}</p>
+        <div class="spacer"></div>
+        <a
+          href="//{{this.link}}"
+          target="_blank"
+          class="partners-item__link"
+        >{{this.link}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

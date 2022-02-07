@@ -5,6 +5,22 @@
 
   background-color: $color-accent;
 
+  &._about {
+    position: relative;
+    top: -40px;
+    z-index: -1;
+
+    padding-bottom: 80px;
+
+    background-color: #F1EFEF;
+
+    .container {
+      padding-top: 20px;
+      padding-bottom: 0;
+      background-color: transparent;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -22,6 +38,21 @@
     font-size: 72px;
     line-height: 1;
     text-align: center;
+
+    color: $color-black;
+  }
+
+  &__sub-title {
+    max-width: 980px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    font-family: $font-family-book;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+
+    white-space: pre-line;
 
     color: $color-black;
   }

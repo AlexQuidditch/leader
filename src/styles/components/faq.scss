@@ -1,0 +1,31 @@
+@import '../variables';
+
+.faq {
+  .faq-wrapper {
+    padding: 40px 80px;
+    background-color: $color-black;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 57px;
+
+    font-family: $font-family-book;
+    color: $color-white;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__sub-title {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 26px;
+
+    color: $color-white;
+  }
+}

@@ -1,23 +1,36 @@
 @import '../variables';
 
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   position: relative;
-
-  min-height: 100vh;
 
   background-size: cover;
   background-image: url('/src/images/hero-background.jpg');
   background-repeat: no-repeat;
   background-position: center;
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+  }
+
+  &._about {
+    .hero__title {
+      margin-top: 10vh;
+    }
+
+    .badge {
+      position: static;
+    }
+  }
+
   &__title {
     margin-bottom: 80px;
 
-    font-family: $font-family-bold;
+    font-family: $font-family-book;
     font-style: normal;
     font-weight: bold;
 

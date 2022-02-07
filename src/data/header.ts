@@ -2,7 +2,7 @@ export const header = {
   menu: [
     {
       text: 'Компания',
-      link: '/schedule.html',
+      link: '/about.html',
       anchor: '',
     },
     {

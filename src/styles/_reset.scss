@@ -70,3 +70,12 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: black;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+img {
+  display: block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
