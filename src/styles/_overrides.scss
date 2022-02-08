@@ -19,3 +19,12 @@ body.admin-bar {
     padding-top: 72px + $admin-bar-height;
   }
 }
+
+
+.wrapper {
+  &._about {
+    .reviews__title {
+      text-align: left;
+    }
+  }
+}
