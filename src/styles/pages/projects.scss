@@ -1,0 +1,19 @@
+@import '../variables';
+
+.wrapper._projects {
+  .hero {
+    background-image: url('/images/hero-projects.jpg');
+
+    &__title {
+      max-width: 600px;
+    }
+  }
+
+  .badge {
+    position: static;
+  }
+
+  .reviews {
+    background-color: #E2E2E2;
+  }
+}

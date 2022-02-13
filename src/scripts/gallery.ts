@@ -1,4 +1,4 @@
-import SwiperCore, { Pagination, Autoplay } from 'swiper/core';
+import SwiperCore, { Pagination, Autoplay, Navigation } from 'swiper/core';
 import 'swiper/swiper-bundle.css'
 
 import { useScrollBy } from './scroll';
@@ -6,6 +6,7 @@ import { useScrollBy } from './scroll';
 SwiperCore.use([
   Pagination,
   Autoplay,
+  Navigation,
 ]);
 
 export function useGallery(selector: string) {
@@ -18,7 +19,11 @@ export function useGallery(selector: string) {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      bulletClass: `${selector.replaceAll('#', '')}__pagination-bullet`
+      bulletClass: `${selector.replaceAll('#', '')}__pagination-bullet`,
+    },
+    navigation: {
+      prevEl: '.reviews-slider__control._prev',
+      nextEl: '.reviews-slider__control._next',
     },
   });
   return swiper;

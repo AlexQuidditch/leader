@@ -110,23 +110,22 @@
       background: darken($color-accent, 10%);
     }
   }
-}
 
-// :checked
-input:checked {
-  +.accordion__label {
-    &::after {
-      content: '-';
+  // :checked
+  input:checked {
+    +.accordion__label {
+      &::after {
+        content: '-';
+      }
     }
-  }
 
-  ~.accordion__label {
-    color: $color-accent;
-  }
+    ~.accordion__label {
+      color: $color-accent;
+    }
 
-  ~.accordion__content {
-    max-height: 100vh;
-    padding: 0 12px;
-    padding-bottom: 40px;
+    ~.accordion__content {
+      max-height: 100vh;
+      padding: 0 12px;
+    }
   }
 }

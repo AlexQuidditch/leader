@@ -1,6 +1,8 @@
 @import '../variables';
 
 .faq {
+  z-index: 1;
+
   .faq-wrapper {
     padding: 40px 80px;
     background-color: $color-black;

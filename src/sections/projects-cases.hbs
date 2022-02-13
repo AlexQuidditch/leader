@@ -1,0 +1,31 @@
+{{#with projects}}
+<section
+  id="our-cases"
+  class="our-cases"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-5">
+        <h3 class="our-cases__title">
+          НАШИ
+          <span>КЕЙСЫ</span>
+        </h3>
+        <p class="our-cases__message">Можно много говорить о том, что мы стоим на страже интересов наших клиентов. Но лучше один раз увидеть, чем сто раз услышать. Посмотрите выигранные нами дела. Каждое из них – это непростая проблема, возникшая у нашего клиента. И в каждом из них мы сделали все возможное, чтобы найти лучшее решение.</p>
+      </div>
+
+      <div class="col-7">
+        <img
+          src="/images/folder-with-docs.jpg"
+          alt=""
+        >
+      </div>
+    </div>
+
+    <ul class="projects-list">
+      {{#each list}}
+      {{> projects-item projectItem=this }}
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

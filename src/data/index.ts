@@ -4,4 +4,5 @@ export * from './header';
 export * from './hero';
 export * from './partners';
 export * from './prices';
+export * from './projects';
 export * from './services';

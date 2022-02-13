@@ -7,17 +7,17 @@ export const header = {
     },
     {
       text: 'Услуги',
-      link: '/trainers.html',
-      anchor: '',
-    },
-    {
-      text: 'Проекты',
       link: '/services.html',
       anchor: '',
     },
     {
+      text: 'Проекты',
+      link: '/projects.html',
+      anchor: '',
+    },
+    {
       text: 'Контакты',
-      link: '/promotions.html',
+      link: '/contacts.html',
       anchor: '',
     },
   ],

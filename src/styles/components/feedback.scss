@@ -1,14 +1,13 @@
 @import '../variables';
 
 .feedback {
-  padding: 120px 0;
+  padding: 70px 0;
 
   background-color: $color-accent;
 
   &._about {
     position: relative;
     top: -40px;
-    z-index: -1;
 
     padding-bottom: 80px;
 

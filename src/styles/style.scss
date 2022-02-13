@@ -1,3 +1,21 @@
-@import '../fonts/fonts';
+@font-face {
+    font-family: 'Futurica';
+    src: url('/fonts/Futurica.woff2') format('woff2'),
+        url('/fonts/Futurica.woff') format('woff'),
+        url('/fonts/Futurica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AGOpusHighResolution';
+    src: url('/fonts/agopushighresolution-roman.woff2') format('woff2'),
+        url('/fonts/agopushighresolution-roman.woff') format('woff'),
+        url('/fonts/agopushighresolution-roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @import './general';

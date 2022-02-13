@@ -14,7 +14,48 @@
   }
 
   .reviews-slider {
-    overflow: hidden;
+    position: relative;
+
+    &__control {
+      z-index: 10;
+
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      appearance: none;
+      background-color: transparent;
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+
+      &._prev {
+        left: 0;
+        border-width: 21.5px 38px 21.5px 0;
+        border-color: transparent $color-primary transparent transparent;
+
+        &:focus {
+          border-right-color: $color-accent;
+        }
+      }
+
+      &._next {
+        right: 0;
+        border-width: 21.5px 0 21.5px 38px;
+        border-color: transparent transparent transparent $color-primary;
+
+        &:focus {
+          border-left-color: $color-accent;
+        }
+      }
+    }
+  }
+
+  .swiper-wrapper {
+
   }
 
   .reviews-slide {
