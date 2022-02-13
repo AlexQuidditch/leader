@@ -11,11 +11,46 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>Services</title>
+  <title>Проекты</title>
 </head>
 
 <body>
-  Services
+  <div
+    id="app"
+    class="wrapper _services"
+  >
+    {{> header }}
+
+    {{> sidebar }}
+
+    {{> hero title="Наши услуги" }}
+
+    <section
+      id="our-cases"
+      class="our-cases"
+    >
+      <div class="container">
+        <ul class="projects-list">
+          {{#each services.list}}
+          {{> projects-item projectItem=this }}
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+
+    {{> feedback }}
+
+    {{> services }}
+
+    {{> reviews }}
+
+    {{> footer }}
+  </div>
+
+  <script
+    type="module"
+    src="/src/scripts/main.ts"
+  ></script>
 </body>
 
 </html>

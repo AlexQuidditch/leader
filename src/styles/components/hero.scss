@@ -91,4 +91,26 @@
       }
     }
   }
+
+  &__back {
+    display: flex;
+    align-items: center;
+
+    font-family: $font-family-book;
+    font-size: 48px;
+    font-weight: bold;
+
+    color: $color-accent;
+
+    img {
+      margin-top: 10px;
+      margin-right: 20px;
+      width: 55px;
+    }
+
+    span {
+      line-height: 1;
+      text-transform: lowercase;
+    }
+  }
 }

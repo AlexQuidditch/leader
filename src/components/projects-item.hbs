@@ -5,7 +5,7 @@
     alt="{{this.title}}"
     class="project-item__picture"
   />
-  <h4 class="project-item__title">{{this.title}}</h4>
+  <a href="/case.html" class="project-item__title">{{this.title}}</a>
   <p class="project-item__description">{{this.description}}</p>
   <input
     type="checkbox"
@@ -18,7 +18,7 @@
   ></label>
   <ul class="project-item__additional">
     {{#each this.additional}}
-    <li>{{this}}<br><br><br></li>
+    <li>{{this}}</li>
     {{/each}}
   </ul>
 </li>
