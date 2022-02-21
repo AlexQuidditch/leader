@@ -1,7 +1,10 @@
 @import './variables';
 
 .btn {
-  padding: 22px 40px;
+  min-width: 164px;
+  min-height: 64px;
+
+  padding: 0 16px;
 
   font-size: 14px;
   font-weight: 800;

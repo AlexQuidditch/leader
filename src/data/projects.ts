@@ -1,5 +1,6 @@
 interface Project {
   idx: number
+  link: string
   image: string
   title: string
   description: string
@@ -13,6 +14,7 @@ interface ProjectsModule {
 export const projects: ProjectsModule = {
   list: [
     {
+      link: '/service.html',
       image: '/images/case_holding-house.jpg',
       title: 'Взыскание с застройщика (11.10.21)',
       description: 'Взыскание с застройщика АО "МЕЖРЕГИОНОПТТОРГ"\n компенсации за отсутствие автоматической парковочной системы Клаус в паркинге (ЖК "ВЛюблино"). Всего взыскано 2 395\n 567,46 руб. (134% от заявленной суммы)',
@@ -21,6 +23,7 @@ export const projects: ProjectsModule = {
       ],
     },
     {
+      link: '/service.html',
       image: '/images/case_holding-house.jpg',
       title: 'Взыскание с застройщика (11.10.21)',
       description: 'Взыскание с застройщика АО "МЕЖРЕГИОНОПТТОРГ"\n компенсации за отсутствие автоматической парковочной системы Клаус в паркинге (ЖК "ВЛюблино"). Всего взыскано 2 395\n 567,46 руб. (134% от заявленной суммы)',

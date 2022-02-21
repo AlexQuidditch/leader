@@ -26,48 +26,19 @@
     min-height: 70px;
 
     font-size: 0;
-  }
-
-  &__image {
-    width: 245px;
-    height: 78px;
-    fill: $color-accent;
 
     @media (max-width: $screen-sm-max) {
-      width: 100px;
-      height: 31.84px;
+      min-width: initial;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
     }
   }
 }
 
 ._no-scroll {
-  @media (max-width: $screen-sm-max) {
-    .logo__link {
-      z-index: 9999;
-      position: fixed;
-      top: 20px;
-      left: 20px;
-    }
-  }
-
-  .logo__image {
-    fill: $color-white;
-
-    &._accent {
-      fill: $color-accent;
-    }
-  }
-}
-
-.menu-container {
-  display: flex;
-  position: fixed;
-  right: 0;
-  top: 0;
-
-  @media (max-width: $screen-sm-max) {
-    display: none;
-  }
 }
 
 .header-menu {
@@ -100,17 +71,5 @@
     &:hover {
       color: $color-accent;
     }
-  }
-}
-
-.header-avatar {
-  padding: 5px;
-  font-size: 0;
-  background-color: $color-white;
-
-  &__image {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
   }
 }

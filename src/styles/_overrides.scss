@@ -25,6 +25,12 @@ body.admin-bar {
   &._about {
     .reviews__title {
       text-align: left;
+
+      @media (max-width: $screen-sm-max) {
+        padding-bottom: 45px;
+        text-align: center;
+        background-color: transparent;
+      }
     }
   }
 }

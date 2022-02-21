@@ -38,14 +38,38 @@ $hamburger-hover-opacity: initial;
 
     z-index: 999;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 24px;
+    right: 24px;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    background-color: $color-primary;
+
+    border-radius: 50%;
 
     &._white {
+
+      .hamburger-box {
+        width: 34px;
+        height: 24px;
+      }
+
+      .hamburger-inner::before {
+        top: 12px;
+      }
+
+      .hamburger-inner::after {
+        top: 24px;
+      }
 
       .hamburger-inner,
       .hamburger-inner::before,
       .hamburger-inner::after {
+        width: 34px;
         background-color: $color-white;
       }
     }
@@ -57,7 +81,7 @@ $hamburger-hover-opacity: initial;
     }
 
     @media (max-width: $screen-sm-max) {
-      display: block;
+      display: flex;
     }
   }
 
@@ -74,7 +98,7 @@ $hamburger-hover-opacity: initial;
     line-height: 1;
     color: $color-black;
 
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
       text-align: left;
       font-size: 24px;
     }
@@ -85,7 +109,7 @@ $hamburger-hover-opacity: initial;
     line-height: 1.44;
     color: $color-black;
 
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
       margin-bottom: 40px;
     }
   }

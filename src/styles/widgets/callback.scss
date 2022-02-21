@@ -41,4 +41,35 @@
       justify-content: center;
     }
   }
+
+  @media (max-width: $screen-md-max) {
+    position: fixed;
+    left: 0;
+    bottom: 65px;
+
+    width: initial;
+
+    &__phone,
+    &__message {
+      display: none;
+    }
+
+    &__icon {
+      width: 34px;
+      height: 34px;
+      margin-right: 0;
+    }
+
+    &__row {
+      padding: 11px 26px;
+
+      &._last {
+        display: none;
+      }
+    }
+
+    &__icon._mobile {
+      background-color: $color-primary;
+    }
+  }
 }

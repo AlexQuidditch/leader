@@ -1,25 +1,29 @@
-{{#with projectItem}}
-<li class="project-item">
+<li class="project-item {{className}}">
   <img
-    src="{{this.image}}"
-    alt="{{this.title}}"
+    src="{{projectItem.image}}"
+    alt="{{projectItem.title}}"
     class="project-item__picture"
   />
-  <a href="/case.html" class="project-item__title">{{this.title}}</a>
-  <p class="project-item__description">{{this.description}}</p>
+  <a href="{{projectItem.link}}" class="project-item__title">{{projectItem.title}}</a>
+  <img
+    src="/images/arrow-right_white.png"
+    alt="Перейти"
+    class="project-item__arrow"
+  />
+  <div class="project-item__spacer"></div>
+  <p class="project-item__description">{{projectItem.description}}</p>
   <input
     type="checkbox"
-    id="project-item-{{this.idx}}"
-    name="project-item-{{this.idx}}"
+    id="project-item-{{projectItem.idx}}"
+    name="project-item-{{projectItem.idx}}"
   />
   <label
     class="project-item__label"
-    for="project-item-{{this.idx}}"
+    for="project-item-{{projectItem.idx}}"
   ></label>
   <ul class="project-item__additional">
-    {{#each this.additional}}
+    {{#each projectItem.additional}}
     <li>{{this}}</li>
     {{/each}}
   </ul>
 </li>
-{{/with}}

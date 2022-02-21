@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $menuButton.addEventListener('click', e => {
     e.preventDefault()
     if (!$menuButton || !$sidebarEl) { return }
-    $menuButton.classList.toggle('is-active')
+    // $menuButton.classList.toggle('is-active')
     $sidebarEl.classList.toggle('_active')
     document.documentElement.classList.toggle('_no-scroll')
   })
@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   useGallery('#reviews-slider')
   useGallery('#team-slider')
+  useGallery('#services-projects-slider')
+  useGallery('#services-slider', {
+    width: 296
+  })
 
   Array
     .from(document.querySelectorAll('[data-target-dialog]'))

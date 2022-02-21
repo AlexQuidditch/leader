@@ -1,12 +1,18 @@
 {{#with services}}
-<section class="services">
+<section
+  id="services"
+  class="services"
+>
   <div class="container">
-    <ul class="services-list row">
+    <ul class="services-list _first row">
       <li
         class="services-list__item col-3 col-sm-6"
         style="background-image:url('/images/estate-legal.png')"
       >
-        <h5 class="services-list__item-title">Легализация объектов недвижимости</h5>
+        <a
+          href="/services.html"
+          class="services-list__item-title"
+        >Легализация объектов недвижимости</a>
         <div class="spacer"></div>
         <img
           src="/images/arrow-right_white.png"
@@ -16,10 +22,13 @@
       </li>
 
       <li class="services-list__item _dark col-3 col-sm-6">
-        <h5 class="services-list__item-title">Оспаривание в судебном порядке</h5>
+        <a
+          href="/services.html"
+          class="services-list__item-title"
+        >Оспаривание в судебном порядке</a>
         <div class="spacer"></div>
         <img
-          src="/images/arrow-right_white.png"
+          src="/images/arrow-right_primary.png"
           alt="Перейти"
           class="services-list__item-link"
         />
@@ -29,7 +38,10 @@
         class="services-list__item col-3 col-sm-6"
         style="background-image:url('/images/landmark.jpg')"
       >
-        <h5 class="services-list__item-title">Работа с земельными участками</h5>
+        <a
+          href="/services.html"
+          class="services-list__item-title"
+        >Работа с земельными участками</a>
         <div class="spacer"></div>
         <img
           src="/images/arrow-right_white.png"
@@ -42,7 +54,10 @@
         class="services-list__item col-3 col-sm-6"
         style="background-image:url('/images/building.jpg')"
       >
-        <h5 class="services-list__item-title">Выкуп по 159-фз нежилых помещений и зданий</h5>
+        <a
+          href="/services.html"
+          class="services-list__item-title"
+        >Выкуп по 159-фз нежилых помещений и зданий</a>
         <div class="spacer"></div>
         <img
           src="/images/arrow-right_white.png"
@@ -57,7 +72,10 @@
         class="services-list__item col-3 col-sm-6"
         style="background-image:url('/images/estate-consulting.jpg')"
       >
-        <h5 class="services-list__item-title">Консультации в сфере недвижимости</h5>
+        <a
+          href="/services.html"
+          class="services-list__item-title"
+        >Консультации в сфере недвижимости</a>
         <div class="spacer"></div>
         <img
           src="/images/arrow-right_white.png"
@@ -67,7 +85,10 @@
       </li>
 
       <li class="services-list__item col-3 col-sm-6">
-        <h5 class="services-list__item-title">Внесение изменений в ПЗЗ</h5>
+        <a
+          href="/services.html"
+          class="services-list__item-title"
+        >Внесение изменений в ПЗЗ</a>
         <div class="spacer"></div>
         <img
           src="/images/arrow-right_white.png"
@@ -77,9 +98,117 @@
       </li>
 
       <li class="services-list__item _link col-3 col-sm-6">
-        <div class="shape">
+        <a
+          href="/services.html"
+          class="shape"
+        >
           <span>ВСЕ УСЛУГИ</span>
-        </div>
+        </a>
+      </li>
+    </ul>
+
+    <div id="services-slider" class="services-slider">
+      <ul class="swiper-wrapper">
+        <li
+          class="services-list__item swiper-slide"
+          style="background-image:url('/images/estate-legal.png')"
+        >
+          <a
+            href="/services.html"
+            class="services-list__item-title"
+          >Легализация объектов недвижимости</a>
+          <div class="spacer"></div>
+          <img
+            src="/images/arrow-right_white.png"
+            alt="Перейти"
+            class="_align-self-end"
+          />
+        </li>
+
+        <li class="services-list__item swiper-slide _dark">
+          <a
+            href="/services.html"
+            class="services-list__item-title"
+          >Оспаривание в судебном порядке</a>
+          <div class="spacer"></div>
+          <img
+            src="/images/arrow-right_primary.png"
+            alt="Перейти"
+            class="services-list__item-link"
+          />
+        </li>
+
+        <li
+          class="services-list__item swiper-slide"
+          style="background-image:url('/images/landmark.jpg')"
+        >
+          <a
+            href="/services.html"
+            class="services-list__item-title"
+          >Работа с земельными участками</a>
+          <div class="spacer"></div>
+          <img
+            src="/images/arrow-right_white.png"
+            alt="Перейти"
+            class="services-list__item-link"
+          />
+        </li>
+
+        <li
+          class="services-list__item swiper-slide"
+          style="background-image:url('/images/building.jpg')"
+        >
+          <a
+            href="/services.html"
+            class="services-list__item-title"
+          >Выкуп по 159-фз нежилых помещений и зданий</a>
+          <div class="spacer"></div>
+          <img
+            src="/images/arrow-right_white.png"
+            alt="Перейти"
+            class="services-list__item-link"
+          />
+        </li>
+
+        <li
+          class="services-list__item swiper-slide"
+          style="background-image:url('/images/estate-consulting.jpg')"
+        >
+          <a
+            href="/services.html"
+            class="services-list__item-title"
+          >Консультации в сфере недвижимости</a>
+          <div class="spacer"></div>
+          <img
+            src="/images/arrow-right_white.png"
+            alt="Перейти"
+            class="services-list__item-link"
+          />
+        </li>
+
+        <li class="services-list__item swiper-slide">
+          <a
+            href="/services.html"
+            class="services-list__item-title"
+          >Внесение изменений в ПЗЗ</a>
+          <div class="spacer"></div>
+          <img
+            src="/images/arrow-right_white.png"
+            alt="Перейти"
+            class="services-list__item-link"
+          />
+        </li>
+      </ul>
+    </div>
+
+    <ul class="row services-slider">
+      <li class="services-list__item col-12 _link">
+        <a
+          href="/services.html"
+          class="shape"
+        >
+          <span>ВСЕ УСЛУГИ</span>
+        </a>
       </li>
     </ul>
   </div>

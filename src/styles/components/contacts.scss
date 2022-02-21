@@ -6,11 +6,29 @@
 
     &__title {
       max-width: 600px;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 70px;
+      }
     }
   }
 
   .badge {
     position: static;
+
+    @media (max-width: $screen-sm-max) {
+      left: initial;
+      bottom: initial;
+      transform: initial;
+    }
+  }
+
+  .feedback {
+    padding-bottom: 24px;
+  }
+
+  .footer {
+    margin-top: 0;
   }
 }
 
@@ -18,7 +36,7 @@
   padding: 130px 0 60px 0;
 
   @media (max-width: $screen-sm-max) {
-    padding: 90px 0 20px 0;
+    padding: 0;
   }
 
   &__title {
@@ -90,6 +108,41 @@
       img {
         width: 70px;
         margin-right: 30px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 0;
+
+    .container {
+      padding: 0;
+    }
+
+    .contacts-list-wrapper {
+      height: initial;
+      padding: 40px 20px 40px 70px;
+
+      border-radius: 0;
+
+      li {
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+          a img {
+            width: 76px;
+          }
+        }
+      }
+
+      a {
+        font-size: 24px;
+        font-weight: bold;
+
+        img {
+          width: 42px;
+        }
       }
     }
   }

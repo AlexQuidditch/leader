@@ -1,6 +1,7 @@
 @import '../variables';
 
 .about-company {
+  position: relative;
   padding: 90px 0;
 
   background-color: $color-gray;
@@ -48,6 +49,16 @@
     background-position: right 0;
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (max-width: $screen-md-max) {
+      background-image: none;
+    }
+  }
+
+  ._picture {
+    @media (max-width: $screen-md-max) {
+      order: -1;
+    }
   }
 
   .choose-us {
@@ -60,5 +71,34 @@
 
   .col-7 img {
     padding-left: 20px;
+
+    @media (max-width: $screen-md-max) {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: $screen-md-max) {
+    padding-top: 100px;
+    padding-bottom: 0;
+
+    height: auto;
+
+    &__title {
+      z-index: 1;
+      position: absolute;
+      top: -520px;
+
+      font-size: 15vw;
+      font-weight: bold;
+      line-height: 70px;
+
+      span {
+        display: initial;
+      }
+    }
+
+    &__text {
+      display: none;
+    }
   }
 }

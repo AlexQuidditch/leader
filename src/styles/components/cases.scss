@@ -1,6 +1,8 @@
 @import '../variables';
 
 .cases {
+  position: relative;
+
   padding-top: 90px;
   padding-bottom: 140px;
 
@@ -27,5 +29,40 @@
   .badge {
     bottom: 30px;
     left: 100px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+      padding: 0;
+    }
+
+    &__title {
+      z-index: 1;
+      position: absolute;
+      top: 20px;
+      left: 0;
+
+      width: 100%;
+    }
+
+    &__message {
+      padding: 0 20px;
+      margin-bottom: 20px;
+      max-width: initial;
+    }
+
+    .row > .col-md-12:last-child {
+      order: -1
+    }
+
+    .badge {
+      position: static;
+      top: initial;
+      margin: 0 auto 60px auto;
+      transform: initial;
+    }
   }
 }

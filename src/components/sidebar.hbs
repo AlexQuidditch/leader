@@ -1,7 +1,7 @@
 <button
   id="menu-button"
   type="button"
-  class="sidebar__button hamburger hamburger--spring {{variant}}"
+  class="sidebar__button _white hamburger hamburger--spring {{variant}}"
   aria-label="Menu"
   aria-controls="navigation"
 >
@@ -11,9 +11,21 @@
 </button>
 
 {{#with header}}
-<aside id="sidebar" class="sidebar">
+<aside
+  id="sidebar"
+  class="sidebar"
+>
   <div class="sidebar__content">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi fugiat possimus, veritatis esse sapiente culpa nesciunt libero excepturi quia aliquam tempora quod amet, tempore sunt porro in, iure cumque id?
+    <ul class="sidebar-menu col-5">
+      {{#each menu}}
+      <li class="sidebar-menu__item">
+        <a
+          href="{{this.link}}{{this.anchor}}"
+          class="sidebar-menu__item-link"
+        >{{this.text}}</a>
+      </li>
+      {{/each}}
+    </ul>
   </div>
 </aside>
 {{/with}}

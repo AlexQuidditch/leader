@@ -2,16 +2,30 @@
 
 .about-us {
 
+  @media (max-width: $screen-sm-max) {
+    .container {
+      padding: 0;
+    }
+  }
+
   .company {
     gap: 0;
     margin-bottom: 70px;
 
     background-color: white;
 
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 240px;
+    }
+
     &__history {
       padding: 40px 70px 70px 60px;
 
       background-color: $color-accent;
+
+      @media (max-width: $screen-sm-max) {
+        padding: 30px 20px;
+      }
 
       h5 {
         margin-bottom: 50px;
@@ -19,6 +33,21 @@
         font-family: $font-family-book;
         font-size: 64px;
         line-height: 52px;
+
+        @media (max-width: $screen-sm-max) {
+          z-index: 1;
+          position: absolute;
+          top: -430px;
+          left: 0;
+
+          width: 100%;
+
+          font-size: 12vw;
+          font-weight: bold;
+          line-height: 52px;
+
+          text-align: center;
+        }
       }
 
       p {
@@ -26,6 +55,10 @@
 
         font-size: 24px;
         line-height: 26px;
+
+        @media (max-width: $screen-sm-max) {
+          line-height: 28px;
+        }
       }
     }
 
@@ -34,12 +67,42 @@
       border-left: 1px solid #CECECE;
       border-bottom: 1px solid #CECECE;
 
-      .btn:not(._outlined) {
-        margin-right: 30px;
+      .btn {
+        &._outlined {
+          min-width: 224px;
+        }
+
+        &:not(._outlined) {
+          margin-right: 30px;
+        }
+      }
+
+      @media (max-width: $screen-sm-max) {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 40px 20px;
+
+        .btn {
+          &:not(._outlined) {
+            margin-right: auto;
+          }
+          &._outlined {
+            min-width: initial;
+            max-width: 170px;
+          }
+        }
       }
     }
 
-    &__photo {}
+    &__photo {
+      @media (max-width: $screen-sm-max) {
+        order: -1;
+        height: 450px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   .our-team {
@@ -47,6 +110,11 @@
 
     color: $color-white;
     background-color: $color-primary;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 16px;
+      background-color: transparent;
+    }
 
     &__title {
       position: absolute;
@@ -56,6 +124,13 @@
       font-size: 64px;
 
       color: $color-accent;
+
+      @media (max-width: $screen-sm-max) {
+        top: -220px;
+        left: 0;
+
+        padding: 0 16px;
+      }
     }
   }
 }
@@ -75,6 +150,11 @@
 
     span {
       color: $color-accent;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      text-align: center;
+      line-height: 58px;
     }
   }
 
@@ -97,6 +177,10 @@
 
       &:not(:last-child) {
         border-right: 1px solid $color-accent;
+        @media (max-width: $screen-sm-max) {
+          border-right: none;
+          border-bottom: 1px solid $color-accent;
+        }
       }
 
       h6 {
@@ -107,12 +191,19 @@
       p {
         font-size: 14px;
         white-space: pre-line;
+        @media (max-width: $screen-sm-max) {
+          margin-bottom: 24px;
+        }
       }
 
       img {
         margin-top: 18px;
         margin-bottom: 32px;
         max-height: 90px;
+
+        @media (max-width: $screen-sm-max) {
+          margin-top: 24px;
+        }
       }
     }
   }
@@ -146,6 +237,15 @@
   width: 100%;
   height: 100%;
 
+  @media (max-width: $screen-sm-max) {
+    overflow: visible;
+    background-color: $color-primary;
+
+    .team-slide {
+      margin-top: -50px;
+    }
+  }
+
   .team-slide {
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,6 +253,11 @@
 
     &__info {
       padding: 160px 0 70px 130px;
+
+      @media (max-width: $screen-sm-max) {
+        text-align: center;
+        padding: 30px 20px;
+      }
     }
 
     &__unit {
@@ -184,6 +289,18 @@
 
         z-index: 100;
       }
+
+      @media (max-width: $screen-sm-max) {
+        order: -1;
+        margin-top: -30px;
+
+        img {
+          position: relative;
+          bottom: initial;
+          left: -15%;
+          width: 100%;
+        }
+      }
     }
 
     &__photo-circle {
@@ -199,6 +316,10 @@
       border-radius: 50%;
 
       transform: translate(-50%, -50%);
+
+      @media (max-width: $screen-sm-max) {
+        z-index: -1;
+      }
     }
   }
 
@@ -229,6 +350,7 @@
 
     border-radius: 50%;
     border: 3px solid $color-white;
+    transition: all .2s ease-in-out;
 
     &.swiper-pagination-bullet-active {
       background-color: $color-accent;
@@ -243,11 +365,17 @@
     }
 
     &__pagination-bullet {
-      width: 10px;
-      height: 10px;
+      width: 18px;
+      height: 18px;
 
-      margin-left: 5px;
+      margin-left: 14px;
+      margin-right: 14px;
       border-width: 1px;
+
+      &.swiper-pagination-bullet-active {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 

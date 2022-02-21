@@ -16,7 +16,7 @@
     "vite": "^2.7.13",
     "vite-plugin-handlebars": "^1.6.0"
   },
-  "name": "section-fitness_customer-landing",
+  "name": "leader_landing",
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite --force",

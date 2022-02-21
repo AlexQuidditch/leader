@@ -20,10 +20,16 @@
   &._about {
     .hero__title {
       margin-top: 10vh;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 70px;
+      }
     }
 
-    .badge {
-      position: static;
+    @media (min-width: $screen-lg-min) {
+      .badge {
+        position: static;
+      }
     }
   }
 
@@ -71,13 +77,14 @@
 
     @media (max-width: $screen-sm-max) {
       font-size: 150px;
+      line-height: 80px;
 
       span {
         transform: translate(-30%, 10%) rotate(10deg);
       }
     }
 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       margin-bottom: 170px !important;
       font-size: 50px;
 

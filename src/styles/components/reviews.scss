@@ -99,6 +99,11 @@
       z-index: -1;
       top: 125px;
       left: 100px;
+
+      @media (max-width: $screen-md-max) {
+        top: 110px;
+        left: 40px;
+      }
     }
 
     .badge {
@@ -107,6 +112,54 @@
       left: initial;
       bottom: initial;
       margin: 0 auto;
+
+      @media (max-width: $screen-md-max) {
+        transform: initial;
+      }
+    }
+  }
+
+  @media (max-width: $screen-md-max) {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+      padding: 0;
+    }
+
+    &__title {
+      padding: 30px 0;
+      font-size: 45px;
+      font-weight: bold;
+      background-color: $color-accent;
+    }
+
+    .col-5.col-md-12 {
+      img {
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 67px;
+      }
+    }
+
+    .reviews-slide {
+      padding: 0;
+
+      &__message {
+        margin: 0 60px 60px;
+        max-width: initial;
+      }
+    }
+
+    .reviews-slider {
+      &__control {
+        top: 20%;
+        margin: 0 8px;
+        transform: scale(0.8);
+
+        &._prev {}
+        &._next {}
+      }
     }
   }
 }

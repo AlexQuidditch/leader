@@ -30,4 +30,34 @@
 
     color: $color-white;
   }
+
+  @media (max-width: $screen-md-max) {
+    .container {
+      padding: 0;
+    }
+
+    .faq-wrapper {
+      padding: 50px 10px;
+
+      .row {
+        row-gap: 20px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0;
+      font-size: 15vw;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &__sub-title {
+      padding: 0 40px;
+      margin-bottom: 24px;
+      text-align: center;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
 }

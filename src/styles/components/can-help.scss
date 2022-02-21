@@ -7,6 +7,8 @@
   background-color: $color-gray;
 
   &__title {
+    margin-bottom: 30px;
+
     font-weight: bold;
     font-size: 72px;
     line-height: 70px;
@@ -35,5 +37,34 @@
     background-repeat: no-repeat;
     background-image: url('/images/help.jpg');
     background-size: contain;
+
+    @media (max-width: $screen-md-max) {
+      background-image: none;
+    }
+  }
+
+  ._picture {
+    display: none;
+    order: -1;
+
+    @media (max-width: $screen-md-max) {
+      display: block;
+    }
+  }
+
+  @media (max-width: $screen-md-max) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+
+    height: auto;
+
+    &__title {
+      font-size: 40px;
+      line-height: 50px;
+
+      span {
+        display: initial;
+      }
+    }
   }
 }

@@ -55,28 +55,14 @@
     }
 
     @media (max-width: $screen-sm-max) {
-      padding: 20px 120px 20px 20px;
-      font-size: 30px;
+      padding: 20px 80px 20px 0;
+
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 36px;
 
       &::after {
         right: 20px;
-      }
-    }
-
-    @media (max-width: $screen-xs-max) {
-      padding: 20px 60px 20px 20px;
-
-      &::after {
-        right: 20px;
-        bottom: 20px;
-        top: initial;
-
-        font-size: 60px;
-
-        width: 30px;
-        height: 30px;
-
-        transform: none;
       }
     }
   }
@@ -95,7 +81,7 @@
     transition: all .35s ease-in-out;
 
     @media (max-width: $screen-sm-max) {
-      padding: 0 20px;
+      padding: 0;
     }
   }
 
@@ -126,6 +112,10 @@
     ~.accordion__content {
       max-height: 100vh;
       padding: 0 12px;
+
+      @media (max-width: $screen-sm-max) {
+        padding: 0;
+      }
     }
   }
 }

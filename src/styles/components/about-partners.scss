@@ -63,4 +63,30 @@
       border-radius: 6px;
     }
   }
+
+  @media (max-width: $screen-md-max) {
+    padding-top: 20px;
+
+    &__title {
+      padding-left: 0;
+      margin-bottom: 40px;
+
+      font-size: 14vw;
+      font-weight: bold;
+
+      text-align: center;
+    }
+
+    .partners-list {
+      row-gap: 40px;
+    }
+
+    .partners-item {
+      &:not(:first-child):not(:nth-child(2)) {
+        .partners-item__description {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 }

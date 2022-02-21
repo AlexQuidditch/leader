@@ -51,6 +51,10 @@
           &:nth-child(odd) {
             background-color: $color-primary;
           }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -157,6 +161,36 @@
     &__item-description {
       font-size: 18px;
       line-height: 26px;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &__title {
+      display: none;
+    }
+
+    .team-grid {
+      display: none;
+    }
+
+    .our-team {
+      .team-slide {
+        color: $color-white;
+      }
+
+      &__title {
+        display: none;
+        color: $color-accent;
+
+        @media (max-width: $screen-sm-max) {
+          display: block;
+
+          padding: 0;
+          margin-bottom: 70px;
+
+          font-size: 64px;
+        }
+      }
     }
   }
 }

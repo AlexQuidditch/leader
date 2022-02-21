@@ -1,4 +1,4 @@
-import SwiperCore, { Pagination, Autoplay, Navigation } from 'swiper/core';
+import SwiperCore, { Pagination, Autoplay, Navigation, SwiperOptions } from 'swiper/core';
 import 'swiper/swiper-bundle.css'
 
 import { useScrollBy } from './scroll';
@@ -9,9 +9,10 @@ SwiperCore.use([
   Navigation,
 ]);
 
-export function useGallery(selector: string) {
-  const swiper = new SwiperCore(selector, {
+export function useGallery(selector: string, options?: SwiperOptions) {
+  const swiper = new SwiperCore(selector, options ?? {
     centeredSlides: true,
+    grabCursor: true,
     autoplay: {
       delay: 45000,
       disableOnInteraction: false,

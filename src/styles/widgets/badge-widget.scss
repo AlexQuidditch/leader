@@ -26,4 +26,11 @@ $size: 191px;
     line-height: 32px;
     text-align: center;
   }
+
+  @media (max-width: $screen-sm-max) {
+    left: 50%;
+    bottom: 90px;
+
+    transform: translateX(-50%);
+  }
 }

@@ -29,12 +29,17 @@
       id="our-cases"
       class="our-cases"
     >
-      <div class="container">
-        <ul class="projects-list">
+      <div
+        id="services-projects-slider"
+        class="container services-projects-slider"
+      >
+        <ul class="projects-list _mobile swiper-wrapper">
           {{#each services.list}}
-          {{> projects-item projectItem=this }}
+          {{> projects-item projectItem=this className="swiper-slide" }}
           {{/each}}
         </ul>
+
+        <div class="swiper-pagination services-projects-slider__pagination"></div>
       </div>
     </section>
 
