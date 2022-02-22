@@ -5,7 +5,12 @@
     background-image: url('/images/hero-projects.jpg');
 
     &__title {
-      max-width: auto;
+      max-width: initial;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 8vw;
+        line-height: 64px;
+      }
     }
   }
 
@@ -56,6 +61,29 @@
   .row {
     gap: 0
   }
+
+  @media (max-width: $screen-sm-max) {
+    padding: 16px 0;
+
+    &__title {
+      font-size: 8vw;
+      line-height: 48px;
+
+      span {
+        display: initial;
+      }
+    }
+
+    &__message {
+      margin: 20px 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .case-details {
@@ -81,8 +109,68 @@
 
     white-space: pre-line;
   }
+
+  @media (max-width: $screen-sm-max) {
+    h3 {
+      font-size: 8vw;
+      line-height: 54px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
 }
 
 .case-projects {
   padding-bottom: 110px;
+
+  @media (max-width: $screen-sm-max) {
+    &._projects {
+      .project-item {
+        padding-bottom: 120px;
+        margin-bottom: 80px;
+        background-color: $color-primary;
+
+        &__title {
+          position: static;
+          top: initial;
+          left: initial;
+          width: auto;
+          margin: 0 auto;
+          padding: 0 40px;
+          text-align: center;
+          text-decoration: underline;
+        }
+
+        &__picture {
+          position: relative;
+          top: -30px;
+          left: 0;
+
+          width: 285px;
+          height: 258px;
+
+          margin: 0 auto;
+        }
+
+        &__spacer {
+          display: none;
+        }
+
+        &__arrow {
+          display: none;
+        }
+
+        &__label {
+          bottom: 40px !important;
+          background-color: $color-accent
+        }
+
+        &__additional {
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+  }
 }

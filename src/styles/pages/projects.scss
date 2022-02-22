@@ -11,6 +11,10 @@
 
   .badge {
     position: static;
+
+    @media (max-width: $screen-sm-max) {
+      transform: none;
+    }
   }
 
   .reviews {
