@@ -3,11 +3,12 @@ import { readdirSync } from 'fs';
 
 import { plugins } from './src/plugins';
 
-import { UserConfig } from 'vite';
+import { defineConfig, UserConfig } from 'vite';
 
 const config: UserConfig = {
   plugins,
   build: {
+    outDir: resolve(__dirname, '../back/local/templates/leader'),
     rollupOptions: {
       input: {}
     }
@@ -23,4 +24,4 @@ readdirSync(__dirname)
     config.build.rollupOptions.input[key] = resolve(__dirname, file)
   });
 
-export default config
+export default defineConfig(config)
